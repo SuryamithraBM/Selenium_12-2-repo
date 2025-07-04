@@ -1,6 +1,7 @@
 package giftcards;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -23,5 +24,6 @@ public class TC_DWS_003_Test extends BaseClass{
 		hp.getGiftCardLink().click();
 		Assert.assertEquals(driver.getTitle(), "Demo Web Shop . Giftcards", " Gift Cards page is not displayed");
 		test.log(Status.PASS, "Giftcards page is displayed");
+		Reporter.log("It will not take ScreenShot", true);
 	}
 }
